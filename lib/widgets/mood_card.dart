@@ -38,6 +38,13 @@ class ItemCard extends StatelessWidget {
                 MaterialPageRoute(
                     builder: (context) => const MoodEntryFormPage()));
           }
+          else if (item.name == "Lihat Mood") {
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => const MoodEntryPage()
+                ),
+            );
+          }
         },
         // Container untuk menyimpan Icon dan Text
         child: Container(
