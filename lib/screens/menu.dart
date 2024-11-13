@@ -15,7 +15,6 @@ class MyHomePage extends StatelessWidget {
 
   MyHomePage({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     // Scaffold menyediakan struktur dasar halaman dengan AppBar dan body.
@@ -32,8 +31,11 @@ class MyHomePage extends StatelessWidget {
         ),
         // Warna latar belakang AppBar diambil dari skema warna tema aplikasi.
         backgroundColor: Theme.of(context).colorScheme.primary,
+        // Mengganti warna icon drawer menjadi putih
         iconTheme: const IconThemeData(color: Colors.white),
       ),
+      // Masukkan drawer sebagai parameter nilai drawer dari widget Scaffold
+      drawer: const LeftDrawer(),
       // Body halaman dengan padding di sekelilingnya.
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -93,7 +95,6 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
-      drawer: const LeftDrawer(),
     );
   }
 }
